@@ -29,4 +29,14 @@ public class SocioDTO {
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
+
+	@Override
+	public String toString() {
+		return "SocioDTO{" +
+				"id=" + id +
+				", apellido='" + apellido + '\'' +
+				", nombre='" + nombre + '\'' +
+				", codigo='" + codigo + '\'' +
+				'}';
+	}
 }

@@ -55,7 +55,7 @@ public class OrdenResource {
 	public ResponseEntity<?> post(
 			@Valid @RequestBody OrdenRequestDTO ordenRequestDto
 			) throws URISyntaxException {
-		
+
 		//saber si existe el socio
 		SocioDTO socioDto = restTemplateClient
 			.getForObject(sociosPathUrlBase + "/socio/"+ordenRequestDto.getSocioId(),
@@ -64,6 +64,7 @@ public class OrdenResource {
 		if(socioDto == null) {
 			return ResponseEntity.badRequest().build();
 		}
+
 		
 		//convierto de dto a entity
 		Orden newOrden = Orden.builder()
