@@ -44,7 +44,6 @@ public class OrdenResource {
 	private String sociosPathUrlBase;
 	
 	//GET all
-	//@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping(value="/orden", produces = "application/json")
 	public ResponseEntity<List<Orden>> findAll() {
 	
